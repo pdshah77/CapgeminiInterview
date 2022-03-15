@@ -13,3 +13,5 @@ Capgemini L2 Interview - For JAVA and Selenium Automation Testing
 7. Write a Program to Count no of digits, special character and alphabets from given jumble String
 	Ex String: String str="1213$#$#%$#jhgjhg#%$#%8987$#%hgg%$876$%#fgjhjh"
 8. Write a Program to convert given ddmmyyyy format to mmddyyyy
+9. How to Integrate Screenshot with Test Results
+10. Write a Code to Capture the Screenshot for Error Scenarios
