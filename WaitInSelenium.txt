@@ -1,0 +1,61 @@
+// Defination of Implicit Wait, Explicit Wait and Fluent Wait 
+
+For Implicit Wait needs to import below Package:
+------------------------------------------------
+import java.util.concurrent.TimeUnit;
+
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+  ** Selenium WebDriver throws No Such Element Exception **
+
+For Explicit Wait needs to import below Package:
+------------------------------------------------
+import org.openqa.selenium.support.ui.ExpectedConditions
+import org.openqa.selenium.support.ui.WebDriverWait
+
+WebDriverWait wait = new WebDriverWait(driver,30)   // Wait time always in SECONDS
+
+wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("")));
+ *** Selenium WebDriver to wait for 30 seconds before throwing a TimeoutException ***
+
+Following Expected Conditions can be used in Explicit Wait:
+1. alertIsPresent()
+
+2. elementSelectionStateToBe()
+3. elementToBeClickable()
+4. elementToBeSelected()
+
+5. frameToBeAvailbleAndSwitchToIt()
+
+6. invisibilityOfTheElementLocated()
+7. invisibilityOfElementWithText()
+
+8. presenceOfAllElementsLocatedBy()
+9. presenceOfElementLocated()
+
+10. textToBePresentInElement()
+11. textToBePresentInElementLocated()
+12. textToBePresentInElementValue()
+
+13. titleIs()
+14. titleContains()
+
+15. visibilityOf()
+16. visibilityOfAllElements()
+17. visibilityOfAllElementsLocatedBy()
+18. visibilityOfElementLocated()
+
+     Fluent Wait:
+----------------------------------------
+Exception thrown is ElementNotVisibleException
+most useful when interacting with web elements that can take longer durations to load.
+Often happens in AJAX Application
+
+Wait wait = new FluentWait(driver)
+.withTimeout(timeout, SECONDS)
+.pollingEvery(timeout, SECONDS)
+.ignoring(Exception.class);
+
+
+driver.manage().timeouts().pageLoadTimeout(100, SECONDS);
+
+driver.manage().timeouts().setScriptTimeout(100,SECONDS);
